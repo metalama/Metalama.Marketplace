@@ -6,9 +6,9 @@ using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using Spectre.Console.Cli;
 using Dependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.TemplateDependencies;
 
-var product = new Product( Dependencies.MyProduct )
+var product = new Product( Dependencies.MetalamaMarketplace )
 {
-    PublicArtifacts = Pattern.Create( "My.Product.$(PackageVersion).nupkg" ),
+    PublicArtifacts = Pattern.Create( "Metalama.Marketplace.$(PackageVersion).nupkg" ),
     Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering }
 };
 
