@@ -2,13 +2,22 @@
 
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build.Model;
+using PostSharp.Engineering.BuildTools.ContinuousIntegration;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
+using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using Spectre.Console.Cli;
-using Dependencies = PostSharp.Engineering.BuildTools.Dependencies.Definitions.TemplateDependencies;
 
-var product = new Product( Dependencies.MetalamaMarketplace )
+const string projectName = "Metalama.Marketplace";
+var productFamily = new ProductFamily( projectName, "2023.0", DevelopmentDependencies.Family );
+var repository = new GitHubRepository( projectName );
+var ciConfiguration = TeamCityHelper.CreateConfiguration(
+    TeamCityHelper.GetProjectId( projectName, "Websites And Business Systems" ),
+    "caravela04cloud" );
+var dependencyDefinition =
+    new DependencyDefinition( productFamily, projectName, "master", null, repository, ciConfiguration, false );
+
+var product = new Product( dependencyDefinition )
 {
-    PublicArtifacts = Pattern.Create( "Metalama.Marketplace.$(PackageVersion).nupkg" ),
     Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering }
 };
 
