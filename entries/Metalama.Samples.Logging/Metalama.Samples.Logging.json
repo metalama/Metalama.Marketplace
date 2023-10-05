@@ -1,0 +1,19 @@
+{
+    "name": "Example: Logging",
+    "kind": "Sample",
+    "categories": [ "Contracts" ],
+    "author": "PostSharp Technologies",
+    "quality": "Sample",
+    "license": "MIT",
+    "src-url": "https://github.com/postsharp/Metalama.Samples",
+    "doc-url": "https://doc.metalama.net/",
+    "summary": "Metalama.Samples.Logging.md",
+    "keywords": [ "contract", "null", "greater", "smaller", "email" ],
+    "aspects": [
+        {
+            "name": "LogAttribute",
+            "doc-url": "https://doc.metalama.net/",
+            "description": "LogAttribute.md"
+        }
+    ]
+}

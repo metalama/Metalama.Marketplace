@@ -6,8 +6,8 @@ using PostSharp.Engineering.BuildTools.Search.Updaters;
 
 namespace BuildMetalamaMarketplace;
 
-public class UpdateMarketplaceCommand : UpdateSearchCommand
+public class UpdateMarketplaceCommand : UpdateSearchCommandBase
 {
-    protected override CollectionUpdater CreateUpdater( SearchBackend backend ) =>
+    protected override CollectionUpdater CreateUpdater( SearchBackendBase backend ) =>
         new MarketplaceCollectionUpdater( backend );
 }

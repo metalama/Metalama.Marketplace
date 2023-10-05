@@ -1,0 +1,1 @@
+Custom attribute that, when added to a field, property or parameter, throws a `ArgumentNullException` if the target is assigned a `null` value.

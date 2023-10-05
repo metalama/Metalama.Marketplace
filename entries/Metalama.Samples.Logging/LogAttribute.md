@@ -1,0 +1,1 @@
+A custom attribute that, when added to a method, makes the method start, end, and success or failure get logged.

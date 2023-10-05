@@ -1,0 +1,24 @@
+{
+    "name": "Metalama.Patterns.Caching.Aspects",
+    "kind": "Package",
+    "categories": [ "Caching" ],
+    "author": "PostSharp Technologies",
+    "quality": "PostSharp",
+    "license": "MIT",
+    "src-url": "https://github.com/postsharp/Metalama.Patterns",
+    "doc-url": "https://doc.metalama.net/",
+    "summary": "Metalama.Patterns.Caching.Aspects.md",
+    "keywords": [ "cache", "cache invalidation", "cache dependencies" ],
+    "aspects": [
+        {
+            "name": "CacheAttribute",
+            "doc-url": "https://doc.metalama.net/",
+            "description": "CacheAttribute.md"
+        },
+        {
+            "name": "InvalidateCacheAttribute",
+            "doc-url": "https://doc.metalama.net/",
+            "description": "InvalidateCacheAttribute.md"
+        }
+    ]
+}
