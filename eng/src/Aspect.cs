@@ -4,6 +4,8 @@ using System.Text.Json.Serialization;
 
 namespace BuildMetalamaMarketplace;
 
+#nullable disable
+
 public class Aspect
 {
     [JsonPropertyName( "name" )]

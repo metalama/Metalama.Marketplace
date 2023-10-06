@@ -6,6 +6,8 @@ using System.Xml.Serialization;
 
 namespace BuildMetalamaMarketplace;
 
+#nullable disable
+
 public class AspectLibrary
 {
     [JsonPropertyName( "name" )]
