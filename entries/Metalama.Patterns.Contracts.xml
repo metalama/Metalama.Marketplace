@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Patterns.Contracts</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Contracts</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>PostSharp</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
+    <Summary>
+<![CDATA[
+<p>
+    Throwing exceptions upon detecting a bad or unexpected value is good programming practice called precondition checking.
+    However, writing the same checks over and over in different areas of the code base is tedious, error prone, and difficult to maintain.
+</p>
+<p>
+    PostSharp Code Contracts have the following features and benefits:
+</p>
+<ul>
+    <li>
+        More readable. PostSharp Code Contracts are represented as custom attributes there is less code to read and understand.
+    </li>
+    <li>
+        Inherited. You can add a PostSharp Code Contract attribute to an interface method parameter and it will automatically be enforced in all implementations of this method.
+    </li>
+    <li>
+        Localizable. It's easy to display the error message in the user's language, even if you didn't design for this scenario upfront.
+    </li>
+</ul>
+]]>
+    </Summary>
+    <Keywords>
+        <Keyword>contract</Keyword>
+        <Keyword>null</Keyword>
+        <Keyword>positive</Keyword>
+        <Keyword>negative</Keyword>
+        <Keyword>greater</Keyword>
+        <Keyword>smaller</Keyword>
+        <Keyword>equal</Keyword>
+        <Keyword>invariant</Keyword>
+    </Keywords>
+    <Aspects>
+        <Aspect>
+            <Name>NotNullAttribute</Name>
+            <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
+            <Description>
+<![CDATA[
+<p>
+    Custom attribute that, when added to a field, property or parameter,
+    throws a <code>ArgumentNullException</code> if the target is assigned
+    a <code>null<code> value.
+</p>
+]]>
+            </Description>
+        </Aspect>
+        <Aspect>
+            <Name>NegativeAttribute</Name>
+            <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
+            <Description>
+<![CDATA[
+<p>
+    Custom attribute that, when added to a field, property or parameter,
+    throws an <code>ArgumentOutOfRangeException</code> if the target is assigned
+    a value greater than zero.
+</p>
+<p>
+    Note: Null values are accepted and do not throw an exception.
+</p>
+]]>
+            </Description>
+        </Aspect>
+    </Aspects>
+</AspectLibrary>

@@ -1,26 +1,30 @@
 ﻿// Copyright (c) SharpCrafters s.r.o. See the LICENSE.md file in the root directory of this repository root for details.
 
-using Markdig;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Search;
 using PostSharp.Engineering.BuildTools.Search.Backends;
 using PostSharp.Engineering.BuildTools.Search.Backends.Typesense;
 using PostSharp.Engineering.BuildTools.Search.Updaters;
-using System;
+using ReadSharp;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.Json;
 using System.Threading.Tasks;
-using System.Web;
+using System.Xml;
+using System.Xml.Serialization;
 using Typesense;
 
 namespace BuildMetalamaMarketplace;
 
 public class MarketplaceCollectionUpdater : CollectionUpdater
 {
+    private static readonly XmlSerializer _xmlSerializer = new XmlSerializer( typeof(AspectLibrary) );
+
     public MarketplaceCollectionUpdater( SearchBackendBase searchBackend )
-        : base( searchBackend ) { }
+        : base( searchBackend )
+    {
+    }
 
     public override async Task<bool> UpdateAsync(
         BuildContext context,
@@ -28,62 +32,127 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         string targetCollection )
     {
         var sourcePath = settings.SourceUrl;
-        
+
         if ( !Path.IsPathRooted( sourcePath ) )
         {
             sourcePath = Path.Combine( context.RepoDirectory, sourcePath );
         }
 
-        var entries = new List<MarketplaceEntry>();
+        var aspectLibraries = new List<AspectLibrary>();
 
         if ( settings.Single )
         {
-            entries.Add( this.ParseEntry( sourcePath ) );
+            aspectLibraries.Add( ParseAspectLibrary( sourcePath ) );
         }
         else
         {
-            foreach ( var entryDirectoryPath in Directory.EnumerateDirectories( sourcePath ) )
+            foreach ( var aspectLibraryXmlPath in Directory.EnumerateFiles(
+                         sourcePath,
+                         "*.xml",
+                         SearchOption.TopDirectoryOnly ) )
             {
-                entries.Add( this.ParseEntry( entryDirectoryPath ) );
+                aspectLibraries.Add( ParseAspectLibrary( aspectLibraryXmlPath ) );
             }
         }
 
-        await this.Backend.UpsertDocumentsAsync( targetCollection, entries );
+        await this.Backend.UpsertDocumentsAsync( targetCollection, aspectLibraries );
 
         return true;
     }
 
-    private MarketplaceEntry ParseEntry( string entryDirectoryPath )
+    private static AspectLibrary ParseAspectLibrary( string aspectLibraryXmlPath )
     {
-        (string Encoded, string[] Plain) ReadMarkdown( string markdownFileName )
+        AspectLibrary aspectLibrary;
+
+        using ( var aspectLibraryXmlStream = File.OpenRead( aspectLibraryXmlPath ) )
         {
-            var markdownPath = Path.Combine( entryDirectoryPath, markdownFileName );
-            var markdown = File.ReadAllText( markdownPath );
-            var markdownEncoded = HttpUtility.UrlEncode( markdown );
-            var plainText = Markdown.ToPlainText( markdown );
-            var plainTextLines = plainText.Split( '\n' ).Select( s => s.Trim() ).Where( s => s.Length > 0 ).ToArray();
-            
-            return (markdownEncoded, plainTextLines);
+            using var aspectLibraryXmlReader = new XmlTextReader( aspectLibraryXmlStream );
+            aspectLibrary = (AspectLibrary) _xmlSerializer.Deserialize( aspectLibraryXmlReader )!;
         }
         
-        var entryJsonPath = Path.Combine( entryDirectoryPath, $"{Path.GetFileName( entryDirectoryPath )}.json" );
-        var entryJson = File.ReadAllText( entryJsonPath );
-        var entry = JsonSerializer.Deserialize<MarketplaceEntry>( entryJson ) ??
-                    throw new InvalidOperationException( $"Failed to deserialize '{entryDirectoryPath}'." );
-        var summary = ReadMarkdown( entry.Summary );
-        entry.Summary = summary.Encoded;
-        entry.SummaryText = summary.Plain;
+        TrimStrings( aspectLibrary );
 
-        foreach ( var aspect in entry.Aspects )
+        aspectLibrary.SummaryText = ReadHtml( aspectLibrary.Summary );
+
+        foreach ( var aspect in aspectLibrary.Aspects )
         {
-            var description = ReadMarkdown( aspect.Description );
-            aspect.Description = description.Encoded;
-            aspect.DescriptionText = description.Plain;
+            aspect.DescriptionText = ReadHtml( aspect.Description );
         }
 
-        return entry;
+        return aspectLibrary;
+
+        static void TrimStrings( object o )
+        {
+            foreach ( var property in o.GetType().GetProperties() )
+            {
+                if ( property.PropertyType.IsPrimitive )
+                {
+                    continue;
+                }
+                
+                if ( property.PropertyType.IsArray )
+                {
+                    var elementType = property.PropertyType.GetElementType()!;
+                    
+                    if ( elementType.IsPrimitive )
+                    {
+                        continue;
+                    }
+
+                    var value = property.GetValue( o );
+
+                    if ( value == null )
+                    {
+                        continue;
+                    }
+
+                    if ( elementType == typeof(string) )
+                    {
+                        var trimmedStrings = ((IEnumerable) value).Cast<string>()
+                            .Select( s => s.Trim() ).ToArray();
+
+                        property.SetValue( o, trimmedStrings );
+                    }
+                    else
+                    {
+                        foreach ( var element in (IEnumerable) value )
+                        {
+                            if ( element != null )
+                            {
+                                TrimStrings( element );
+                            }
+                        }
+                    }
+                }
+                else if (property.PropertyType == typeof(string))
+                {
+                    var value = (string?) property.GetValue( o );
+
+                    if ( value != null )
+                    {
+                        property.SetValue( o, value.Trim() );
+                    }
+                }
+                else
+                {
+                    var value = property.GetValue( o );
+
+                    if ( value != null )
+                    {
+                        TrimStrings( value );
+                    }
+                }
+            }
+        }
+
+        static string[] ReadHtml( string html )
+        {
+            var plainText = HtmlUtilities.ConvertToPlainText( html );
+            var plainTextLines = plainText.Split( '\n' ).Select( s => s.Trim() ).Where( s => s.Length > 0 ).ToArray();
+            return plainTextLines;
+        }
     }
 
     public override Schema CreateSchema( string collectionName ) =>
-        CollectionSchemaFactory.CreateSchema<MarketplaceEntry>( collectionName );
+        CollectionSchemaFactory.CreateSchema<AspectLibrary>( collectionName );
 }

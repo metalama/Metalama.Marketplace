@@ -1,1 +1,0 @@
-Custom attribute that, when applied on a method, causes the return value of the method to be cached for the specific list of arguments passed to this method call.

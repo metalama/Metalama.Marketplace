@@ -2,10 +2,11 @@
 
 using PostSharp.Engineering.BuildTools.Search.Backends.Typesense;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace BuildMetalamaMarketplace;
 
-public class MarketplaceEntry
+public class AspectLibrary
 {
     [JsonPropertyName( "name" )]
     public string Name { get; set; }
@@ -14,6 +15,8 @@ public class MarketplaceEntry
     [Facet]
     public string Kind { get; set; }
 
+    [XmlArray("Categories")]
+    [XmlArrayItem("Category")]
     [JsonPropertyName( "categories" )]
     [Facet]
     public string[] Categories { get; set; }
@@ -41,6 +44,8 @@ public class MarketplaceEntry
     [JsonPropertyName( "summary-text" )]
     public string[] SummaryText { get; set; }
     
+    [XmlArray("Keywords")]
+    [XmlArrayItem("Keyword")]
     [JsonPropertyName( "keywords" )]
     public string[] Keywords { get; set; }
     
