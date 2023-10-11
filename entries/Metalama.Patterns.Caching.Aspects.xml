@@ -15,7 +15,7 @@
 <p>
     Caching is a great way to improve the latency an application.
     Traditionally, when you implement caching, you need to play with the API of the caching framework
-    (such as <a href="https://learn.microsoft.com/dotnet/api/system.runtime.caching.memorycache>MemoryCache</a>)
+    (such as <a href="https://learn.microsoft.com/dotnet/api/system.runtime.caching.memorycache">MemoryCache</a>)
     or caching server (such as <a href="https://redis.io/">Redis</a>) and to include moderately complex logic
     to your source code to generate the cache key, check the existence of the item in the cache,
     and add the item into the cache.

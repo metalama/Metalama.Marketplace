@@ -34,17 +34,17 @@ public class AspectLibrary
     [Facet]
     public string License { get; set; }
     
-    [JsonPropertyName( "src-url" )]
+    [JsonPropertyName( "sourceUrl" )]
     public string SourceUrl { get; set; }
     
-    [JsonPropertyName( "doc-url" )]
+    [JsonPropertyName( "documentationUrl" )]
     public string DocumentationUrl { get; set; }
     
     [JsonPropertyName( "summary" )]
     public string Summary { get; set; }
     
-    [JsonPropertyName( "summary-text" )]
-    public string[] SummaryText { get; set; }
+    [JsonPropertyName( "summaryText" )]
+    public string SummaryText { get; set; }
     
     [XmlArray("Keywords")]
     [XmlArrayItem("Keyword")]

@@ -11,12 +11,12 @@ public class Aspect
     [JsonPropertyName( "name" )]
     public string Name { get; set; }
     
-    [JsonPropertyName( "doc-url" )]
+    [JsonPropertyName( "documentationUrl" )]
     public string DocumentationUrl { get; set; }
     
     [JsonPropertyName( "description" )]
     public string Description { get; set; }
     
-    [JsonPropertyName( "description-text" )]
-    public string[] DescriptionText { get; set; }
+    [JsonPropertyName( "descriptionText" )]
+    public string DescriptionText { get; set; }
 }

@@ -72,11 +72,11 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         
         TrimStrings( aspectLibrary );
 
-        aspectLibrary.SummaryText = ReadHtml( aspectLibrary.Summary );
+        aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary );
 
         foreach ( var aspect in aspectLibrary.Aspects )
         {
-            aspect.DescriptionText = ReadHtml( aspect.Description );
+            aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description );
         }
 
         return aspectLibrary;
@@ -143,13 +143,6 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
                     }
                 }
             }
-        }
-
-        static string[] ReadHtml( string html )
-        {
-            var plainText = HtmlUtilities.ConvertToPlainText( html );
-            var plainTextLines = plainText.Split( '\n' ).Select( s => s.Trim() ).Where( s => s.Length > 0 ).ToArray();
-            return plainTextLines;
         }
     }
 
