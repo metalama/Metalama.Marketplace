@@ -20,12 +20,3 @@ public class Aspect
     [JsonPropertyName( "descriptionText" )]
     public string DescriptionText { get; set; }
 }
-
-public class AspectGroup
-{
-    [JsonPropertyName( "name" )]
-    public string Name { get; set; }
-    
-    [JsonPropertyName( "aspects" )]
-    public Aspect[] Aspects { get; set; }
-} 
