@@ -8,8 +8,8 @@
     <Author>PostSharp Technologies</Author>
     <Quality>sample</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Samples</SourceUrl>
-    <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
+    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/develop/2023.4/examples/caching</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/caching</DocumentationUrl>
     <Summary>A series of step-by-step examples on how to implement a custom caching aspect using Metalama.</Summary>
     <Keywords>
         <Keyword>cache</Keyword>
