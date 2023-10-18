@@ -5,6 +5,7 @@ using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using PostSharp.Engineering.BuildTools.ContinuousIntegration;
+using PostSharp.Engineering.BuildTools.ContinuousIntegration.Model;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
@@ -14,7 +15,7 @@ const string projectName = "Metalama.Marketplace";
 var productFamily = new ProductFamily( projectName, "2023.0", DevelopmentDependencies.Family );
 var repository = new GitHubRepository( projectName );
 var ciConfiguration = TeamCityHelper.CreateConfiguration(
-    TeamCityHelper.GetProjectId( projectName, "Websites And Business Systems" ),
+    new TeamCityProjectId( "MetalamaMarketplace", "WebsitesAndBusinessSystems" ),
     "caravela04cloud" );
 var dependencyDefinition =
     new DependencyDefinition( productFamily, projectName, "master", null, repository, ciConfiguration, false );
