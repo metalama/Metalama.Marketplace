@@ -34,6 +34,9 @@ public class AspectLibrary
     [Facet]
     public string License { get; set; }
     
+    [JsonPropertyName( "packageUrl" )]
+    public string PackageUrl { get; set; }
+    
     [JsonPropertyName( "sourceUrl" )]
     public string SourceUrl { get; set; }
     
@@ -46,11 +49,17 @@ public class AspectLibrary
     [JsonPropertyName( "summaryText" )]
     public string SummaryText { get; set; }
     
+    [JsonPropertyName( "description" )]
+    public string Description { get; set; }
+    
+    [JsonPropertyName( "descriptionText" )]
+    public string DescriptionText { get; set; }
+    
     [XmlArray("Keywords")]
     [XmlArrayItem("Keyword")]
     [JsonPropertyName( "keywords" )]
     public string[] Keywords { get; set; }
     
-    [JsonPropertyName( "aspects" )]
-    public Aspect[] Aspects { get; set; }
+    [JsonPropertyName( "aspectGroups" )]
+    public AspectGroup[] AspectGroups { get; set; }
 }

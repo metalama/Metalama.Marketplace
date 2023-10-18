@@ -6,27 +6,12 @@
         <Category>Caching</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Sample</Quality>
+    <Quality>sample</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Samples</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
-    <Summary>
-<![CDATA[
-A serires of examples on how to implement a custom caching aspect using Metalama.
-]]>
-    </Summary>
+    <Summary>A series of step-by-step examples on how to implement a custom caching aspect using Metalama.</Summary>
     <Keywords>
         <Keyword>cache</Keyword>
     </Keywords>
-    <Aspects>
-        <Aspect>
-            <Name>CacheAttribute</Name>
-            <DocumentationUrl>https://doc.metalama.net/</DocumentationUrl>
-            <Description>
-<![CDATA[
-Custom attribute that, when applied on a method, causes the return value of the method to be cached for the specific list of arguments passed to this method call.
-]]>
-            </Description>
-        </Aspect>
-    </Aspects>
 </AspectLibrary>

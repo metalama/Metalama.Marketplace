@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Patterns.Caching</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Caching</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>preview</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/release/2023.4/src/Metalama.Patterns.Caching.Aspects</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/patterns/caching</DocumentationUrl>
+    <PackageUrl>https://www.nuget.org/packages?q=Metalama.Patterns.Caching</PackageUrl>
+    <Summary>
+        A robust caching framework for C# supporting both in-memory caching, Redis distributed caching, and multi-node cache synchronization over
+        Azure Message Bus or Redis Pub/Sub. Supports type-safe cache invalidation and object-oriented cache dependencies.
+    </Summary>
+    <Keywords>
+        <Keyword>cache</Keyword>
+        <Keyword>cache invalidation</Keyword>
+        <Keyword>cache dependencies</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Caching Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>Cache</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_caching_aspects_cacheattribute</DocumentationUrl>
+                    <Description>Caches the return value of the target method as a function of its arguments.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>InvalidateCacheAttribute</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_caching_aspects_invalidatecacheattribute</DocumentationUrl>
+                    <Description>Causes an invocation of the target method to remove from the cache the result of invocations of other given methods with the same arguments.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>CacheKey</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_caching_aspects_cacheattribute</DocumentationUrl>
+                    <Description>Causes the target field or property to be a part of the object identity when the object is used as an argument or as a dependency of a
+                        cached method. Implements the IFormattable interface.
+                    </Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    
+</AspectLibrary>

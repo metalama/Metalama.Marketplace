@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Patterns.Memoization</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Caching</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>preview</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/release/2023.4/src/Metalama.Patterns.Memoization</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/patterns/memoization</DocumentationUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Memoization</PackageUrl>
+    <Summary>
+        A very simple and high-performance caching of get-only properties and parameterless methods which stores the value in
+        the object itself.
+    </Summary>
+    <Keywords>
+        <Keyword>cache</Keyword>
+        <Keyword>memo</Keyword>
+        <Keyword>memoize</Keyword>
+        <Keyword>memoization</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>Memoize</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_memoization_memoizeattribute</DocumentationUrl>
+                    <Description>Caches the return value of the target parameterless method or the value of the target get-only property.</Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    
+</AspectLibrary>

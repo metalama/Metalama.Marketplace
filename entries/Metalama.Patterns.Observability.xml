@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Patterns.Memoization</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Observability</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>preview</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/release/2023.4/src/Metalama.Patterns.Observability</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_observability</DocumentationUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Observability</PackageUrl>
+    <Summary>
+        An implementation of INotifyPropertyChanged supporting composite properties and child objects.
+    </Summary>
+    <Keywords>
+        <Keyword>INotifyPropertyChanged</Keyword>
+        <Keyword>NotifyPropertyChanged</Keyword>
+        <Keyword>inpc</Keyword>
+        <Keyword>npc</Keyword>
+        <Keyword>observable</Keyword>
+        <Keyword>PropertyChanged</Keyword>
+        <Keyword>property</Keyword>
+        <Keyword>changed</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>Observable</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_observability_observableattribute</DocumentationUrl>
+                    <Description>Implements the INotifyPropertyChanged interface.</Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    
+</AspectLibrary>

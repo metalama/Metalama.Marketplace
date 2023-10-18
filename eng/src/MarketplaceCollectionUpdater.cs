@@ -73,8 +73,9 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         TrimStrings( aspectLibrary );
 
         aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary );
+        aspectLibrary.DescriptionText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Description );
 
-        foreach ( var aspect in aspectLibrary.Aspects )
+        foreach ( var aspect in aspectLibrary.AspectGroups.SelectMany(x=>x.Aspects) )
         {
             aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description );
         }
