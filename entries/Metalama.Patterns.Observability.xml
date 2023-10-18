@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <AspectLibrary>
-    <Name>Metalama.Patterns.Memoization</Name>
+    <Name>Metalama.Patterns.Observability</Name>
     <Kind>Package</Kind>
     <Categories>
         <Category>Observability</Category>
+        <Category>Component Model</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Preview</Quality>

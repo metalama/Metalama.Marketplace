@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.NotifyPropertyChanged</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Component Model</Category>
+        <Category>Observability</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/develop/2023.4/examples/notifypropertychanged</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/notifypropertychanged</DocumentationUrl>
+    <Summary>A trivial aspect that automatically implements the INotifyPropertyChanged interface.
+    </Summary>
+    <Keywords>
+        <Keyword>INotifyPropertyChanged</Keyword>
+        <Keyword>NotifyPropertyChanged</Keyword>
+        <Keyword>inpc</Keyword>
+    </Keywords>
+</AspectLibrary>

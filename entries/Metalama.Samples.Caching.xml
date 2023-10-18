@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <AspectLibrary>
-    <Name>Example: Caching</Name>
+    <Name>Metalama.Samples.Caching</Name>
     <Kind>Sample</Kind>
     <Categories>
         <Category>Caching</Category>

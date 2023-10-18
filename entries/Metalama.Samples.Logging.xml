@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Logging</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Logging</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/develop/2023.4/examples/log</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/log</DocumentationUrl>
+    <Summary>A series of step-by-step examples on how to logging.</Summary>
+    <Keywords>
+        <Keyword>log</Keyword>
+        <Keyword>logging</Keyword>
+        <Keyword>trace</Keyword>
+        <Keyword>tracing</Keyword>
+    </Keywords>
+</AspectLibrary>
