@@ -1,0 +1,1 @@
+.\Build.ps1 tools search update https://0fpg9nu41dat6boep.a1.typesense.net metalama-marketplace entries

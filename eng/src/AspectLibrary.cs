@@ -13,9 +13,11 @@ public class AspectLibrary
     [JsonPropertyName( "name" )]
     public string Name { get; set; }
 
+    /*
     [JsonPropertyName( "kind" )]
     [Facet]
     public string Kind { get; set; }
+    */
 
     [XmlArray("Categories")]
     [XmlArrayItem("Category")]
@@ -24,6 +26,7 @@ public class AspectLibrary
     public string[] Categories { get; set; }
 
     [JsonPropertyName( "author" )]
+    [Facet]
     public string Author { get; set; }
     
     [JsonPropertyName( "quality" )]

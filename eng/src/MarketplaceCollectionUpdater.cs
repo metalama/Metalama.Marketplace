@@ -6,6 +6,7 @@ using PostSharp.Engineering.BuildTools.Search.Backends;
 using PostSharp.Engineering.BuildTools.Search.Backends.Typesense;
 using PostSharp.Engineering.BuildTools.Search.Updaters;
 using ReadSharp;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -72,14 +73,18 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         
         TrimStrings( aspectLibrary );
 
-        aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary );
+        aspectLibrary.Description ??= "";
+        aspectLibrary.AspectGroups ??= new[] { new AspectGroup { Aspects = Array.Empty<Aspect>() } };
+        aspectLibrary.PackageUrl ??= "";
+        
+        aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary);
         aspectLibrary.DescriptionText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Description );
 
-        foreach ( var aspect in aspectLibrary.AspectGroups.SelectMany(x=>x.Aspects) )
+        foreach ( var aspect in aspectLibrary.AspectGroups.Where( g => g.Aspects != null ).SelectMany( x => x.Aspects ) )
         {
-            aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description );
+            aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description ?? "" );
         }
-
+    
         return aspectLibrary;
 
         static void TrimStrings( object o )
