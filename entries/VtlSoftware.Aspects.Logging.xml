@@ -10,7 +10,7 @@
     <License>MIT</License>
     <SourceUrl>https://github.com/domsinclair/VtlSoftware.Aspects.Logging</SourceUrl>
     <PackageUrl>https://www.nuget.org/packages/VtlSoftware.Aspects.Logging</PackageUrl>
-    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/WhatDoesTheLoggingLibraryDo.html</DocumentationUrl>
+    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/Introduction.html</DocumentationUrl>
     <Summary>This library provides a complete, production-ready logging aspect for Microsoft.Extensions.Logging. It has several additional features such as timing, redacting sensitive data, 
         and a recursion guard.</Summary>
     <Keywords>
