@@ -9,7 +9,7 @@
     <Quality>Stable</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/domsinclair/VtlSoftware.Aspects.Logging</SourceUrl>
-    <PackageUrl>https://www.nuget.org/packages/VtlSoftware.Aspects.Logging.Net6</PackageUrl>
+    <PackageUrl>https://www.nuget.org/packages/VtlSoftware.Aspects.Logging</PackageUrl>
     <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/WhatDoesTheLoggingLibraryDo.html</DocumentationUrl>
     <Summary>This library provides a complete, production-ready logging aspect for Microsoft.Extensions.Logging. It has several additional features such as timing, redacting sensitive data, 
         and a recursion guard.</Summary>
@@ -26,7 +26,7 @@
                 <Aspect>
                     <Name>Log</Name>
                     <DocumentationUrl>
-                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.LogAttribute.html</DocumentationUrl>
+                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.LogAttribute.html</DocumentationUrl>
                     <Description>Adds logging to a method. Entry and exit is logged along with
                         details of any parameters that were passed into it. If applicable the
                         method's return value is also logged. In addition this aspect can log
@@ -35,7 +35,7 @@
                 <Aspect>
                     <Name>LogAndTime</Name>
                     <DocumentationUrl>
-                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.LogAndTimeAttribute.html</DocumentationUrl>
+                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.LogAndTimeAttribute.html</DocumentationUrl>
 
                     <Description>Exactly the same as the [Log] aspect with the exception that the
                         total duration that the method took to execute is also logged. In Addition
@@ -45,13 +45,13 @@
                 <Aspect>
                     <Name>InjectBasicLogging</Name>
                     <DocumentationUrl>
-                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.InjectBasicLoggingAttribute.html</DocumentationUrl>
+                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.InjectBasicLoggingAttribute.html</DocumentationUrl>
                     <Description>An aspect designed to make it easier for developers to add their
                         own custom logging without having to use the provided aspects.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>InjectControlledLogging</Name>
-                    <DocumentationUrl>https:// vtlsoftware.co.uk/ aspectdocs/ VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.InjectControlledLoggingAttribute.html
+                    <DocumentationUrl>https:// vtlsoftware.co.uk/ aspectdocs/ VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.InjectControlledLoggingAttribute.html
                     </DocumentationUrl>
                     <Description>An aspect designed to make it easier for developers to add their
                         own custom logging without having to use the provided aspects.</Description>
@@ -64,35 +64,35 @@
                 <Aspect>
                     <Name>AddBasicLoggingToAllClasses</Name>
                     <DocumentationUrl>
-                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~AddBasicLoggingToAllClasses.html</DocumentationUrl>
+                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~AddBasicLoggingToAllClasses.html</DocumentationUrl>
                     <Description>Applies the [InjectBasicLogging] aspect to all eligible classes.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>AddControlledLoggingToAllClasses</Name>
                     <DocumentationUrl>
-                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~AddControlledLoggingToAllClasses.html</DocumentationUrl>
+                        https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~AddControlledLoggingToAllClasses.html</DocumentationUrl>
                     <Description>Applies the [InjectControlledLogging] aspect to all eligible
                         classes.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>LogAllMethods</Name>
                     <Description>Applies the [Log] aspect to all eligible methods.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogAllMethods.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogAllMethods.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>LogAndTimeAllMethods</Name>
                     <Description>Applies the [LogAndTime] aspect to all eligible methods.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogAndTimeAllMethods.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogAndTimeAllMethods.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>LogAllPublicMethods</Name>
                     <Description>Applies the [Log] aspect to all public methods.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogAllPublicMethods.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogAllPublicMethods.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>LogAndTimeAllPublicMethods</Name>
                     <Description>Applies the [LogAndTime] aspect to all public methods.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogAndTimeAllPublicMethods.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogAndTimeAllPublicMethods.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>LogAllPublicAndPrivateMethods</Name>
@@ -102,17 +102,17 @@
                 <Aspect>
                     <Name>LogAndTimeAllPublicAndPrivateMethods</Name>
                     <Description>Applies the [LogAndTime] aspect to all public and Private Methods</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogAllPublicAndPrivateMethods.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogAllPublicAndPrivateMethods.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>LogEverything</Name>
                     <Description>Applies the [Log] aspect to all methods and the [Log] aspect to all properties.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~LogEverything.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~LogEverything.html</DocumentationUrl>
                 </Aspect>
                 <Aspect>
                     <Name>TimeEveryMethodAndLogEveryProperty</Name>
                     <Description>Applies the [LogAndTime] aspect to all methods and the [LogAndTime] aspect to all properties.</Description>
-                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging.Net6~VtlSoftware.Aspects.Logging.Net6.FabricExtensions~TimeEveryMethodAndLogEveryProperty.html</DocumentationUrl>
+                    <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/VtlSoftware.Aspects.Logging~VtlSoftware.Aspects.Logging.FabricExtensions~TimeEveryMethodAndLogEveryProperty.html</DocumentationUrl>
                 </Aspect>
             </Aspects>
         </AspectGroup>
