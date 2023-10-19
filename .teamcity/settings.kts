@@ -67,5 +67,16 @@ object PublicUpdateSearch : BuildType({
         }
     }
 
+    triggers {
+        schedule {
+            schedulingPolicy = daily {
+                hour = 0
+            }
+            branchFilter = "+:<default>"
+            triggerBuild = always()
+            withPendingChangesOnly = false
+        }
+    }
+
 })
 

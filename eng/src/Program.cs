@@ -4,6 +4,7 @@ using BuildMetalamaMarketplace;
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
+using PostSharp.Engineering.BuildTools.Build.Triggers;
 using PostSharp.Engineering.BuildTools.ContinuousIntegration;
 using PostSharp.Engineering.BuildTools.ContinuousIntegration.Model;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
@@ -40,7 +41,8 @@ var product = new Product( dependencyDefinition )
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "metalama-marketplace",
             "entries",
-            customBuildConfigurationName: "Deploy [Public]" )
+            customBuildConfigurationName: "Deploy [Public]",
+            buildTriggers: new(null, null, new IBuildTrigger[] { new NightlyBuildTrigger( 0, false ) }) )
     }
 };
 
