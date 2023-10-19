@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
@@ -43,17 +44,63 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
 
         if ( settings.Single )
         {
-            aspectLibraries.Add( ParseAspectLibrary( sourcePath ) );
+            throw new NotSupportedException();
         }
-        else
+
+        // Parse all libraries.
+        foreach ( var aspectLibraryXmlPath in Directory.EnumerateFiles(
+                     sourcePath,
+                     "*.xml",
+                     SearchOption.TopDirectoryOnly ) )
         {
-            foreach ( var aspectLibraryXmlPath in Directory.EnumerateFiles(
-                         sourcePath,
-                         "*.xml",
-                         SearchOption.TopDirectoryOnly ) )
+            aspectLibraries.Add( ParseAspectLibrary( aspectLibraryXmlPath ) );
+        }
+        
+        // Download statistics.
+        async Task GetDownloadStatistics(AspectLibrary aspectLibrary)
+        {
+            var packageRegex = new Regex(@"https://www\.nuget\.org/packages/(?<package>[^/]+)/?");
+            var packageMatch = packageRegex.Match(aspectLibrary.PackageUrl);
+
+            if (packageMatch.Success)
             {
-                aspectLibraries.Add( ParseAspectLibrary( aspectLibraryXmlPath ) );
+                var packageName = packageMatch.Groups["package"].Value;
+
+                context.Console.WriteMessage($"Getting download statistics for {packageName}.");
+
+                int? downloadCounts;
+
+                try
+                {
+                    downloadCounts = await NuGetGalleryHelper.GetDownloadCountsAsync(packageName, context);
+                }
+                catch (Exception e)
+                {
+                    context.Console.WriteError(e.ToString());
+                    downloadCounts = null;
+                }
+
+                if (downloadCounts == null)
+                {
+                    context.Console.WriteWarning($"Cannot get the download count of '{packageName}'.");
+                }
+
+                aspectLibrary.DownloadCounts = downloadCounts ?? 0;
             }
+            else
+            {
+                context.Console.WriteWarning($"{aspectLibrary.PackageUrl} is not a correct NuGet URL.");
+            }
+        }
+        
+        var tasks = aspectLibraries.Where( l => !string.IsNullOrEmpty( l.PackageUrl ) ).Select( GetDownloadStatistics );
+        await Task.WhenAll( tasks );
+        
+        // Compute relative popularity and rank.
+        var maxDownloads = aspectLibraries.Max( l => l.DownloadCounts );
+        foreach ( var aspectLibrary in aspectLibraries )
+        {
+            aspectLibrary.Complete(maxDownloads);
         }
 
         await this.Backend.UpsertDocumentsAsync( targetCollection, aspectLibraries );
@@ -84,7 +131,7 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         {
             aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description ?? "" );
         }
-    
+        
         return aspectLibrary;
 
         static void TrimStrings( object o )

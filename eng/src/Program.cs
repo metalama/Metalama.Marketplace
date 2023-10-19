@@ -47,6 +47,6 @@ var product = new Product( dependencyDefinition )
 var commandApp = new CommandApp();
 
 commandApp.AddProductCommands( product );
-commandApp.Configure( config => config.Settings.PropagateExceptions = true  );
+commandApp.Configure( config => config.Settings.PropagateExceptions = true );
 
 return commandApp.Run( args );

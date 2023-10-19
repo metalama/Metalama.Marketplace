@@ -8,7 +8,7 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Preview</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/release/2023.4/src/Metalama.Patterns.Contracts</SourceUrl>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/patterns/contracts</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Contracts</PackageUrl>
     <Summary>
@@ -129,11 +129,17 @@
             </Aspects>
 
         </AspectGroup>
+        <AspectGroup>
+            <Name>Fabric Extensions</Name>
+            <Aspects>
+                <Aspect>
+                <Name>VerifyNotNullableDeclarations</Name>
+                <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_contractextensions_verifynotnullabledeclarations#metalama_patterns_contracts_contractextensions_verifynotnullabledeclarations_metalama_framework_aspects_iaspectreceiver_metalama_framework_code_icompilation__system_boolean_</DocumentationUrl>
+                <Description>Automatically adds the [NotNull] contract to all non-nullable fields, properties and parameters of the public API, and reports a warning when
+                    the [NotNull] contract has been added manually because this is redundant.</Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
     </AspectGroups>
-    <Aspects>
-        
-        
-        
-        
-    </Aspects>
+    
 </AspectLibrary>

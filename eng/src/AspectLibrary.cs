@@ -1,6 +1,7 @@
 ﻿// Copyright (c) SharpCrafters s.r.o. See the LICENSE.md file in the root directory of this repository root for details.
 
 using PostSharp.Engineering.BuildTools.Search.Backends.Typesense;
+using System;
 using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
@@ -65,4 +66,37 @@ public class AspectLibrary
     
     [JsonPropertyName( "aspectGroups" )]
     public AspectGroup[] AspectGroups { get; set; }
+    
+    [JsonPropertyName( "rank" )]
+    public int Rank { get; set; }
+    
+    [JsonPropertyName( "downloadsCount" )]
+    public int DownloadCounts { get; set; }
+    
+    [JsonPropertyName( "popularity" )]
+    [Facet]
+    public int Popularity { get; set; }
+
+    internal void Complete( int maxDownloads )
+    {
+        if ( this.DownloadCounts == 0 )
+        {
+            this.Popularity = 0;
+        }
+        else
+        {
+            this.Popularity = (int) Math.Round( 5 * Math.Log( this.DownloadCounts ) / Math.Log( maxDownloads ) );
+        }
+
+        var qualityRank = this.Quality.ToLowerInvariant() switch
+        {
+            "preview" => 1,
+            "rc" => 2,
+            "stable" => 3,
+            "certified" => 4,
+            _ => 0,
+        };
+
+        this.Rank = qualityRank + this.Popularity;
+    }
 }
