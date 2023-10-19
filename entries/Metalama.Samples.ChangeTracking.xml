@@ -9,7 +9,7 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/develop/2023.4/examples/change-tracking</SourceUrl>
+    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/change-tracking</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/examples/change-tracking</DocumentationUrl>
     <Summary>A series of step-by-step examples on how implement the IChangeTracking interface -- i.e. the IsDirty pattern.
         Shows how to integrate with the NotifyPropertyChanged aspect.

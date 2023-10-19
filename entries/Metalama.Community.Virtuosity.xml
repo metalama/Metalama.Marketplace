@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Community.Virtuosity</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>SDK</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Stable</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Community/tree/HEAD/src/Metalama.Community.Virtuosity</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Community.Virtuosity</PackageUrl>
+    <Summary>Makes methods virtual.</Summary>
+    <Keywords>
+        <Keyword>fody</Keyword>
+        <Keyword>virtual</Keyword>
+        <Keyword>virtualize</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>Virtualize</Name>
+                    <Description>Makes methods in the type virtual whenever possible.</Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    <!-- Intentionally decrease the rank because we don't want this to appear on top of results. -->
+    <Rank>1</Rank>
+</AspectLibrary>

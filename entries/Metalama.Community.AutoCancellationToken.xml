@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Community.AutoCancellationToken</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>SDK</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Community/tree/HEAD/src/Metalama.Community.AutoCancellationToken</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Community.AutoCancellationToken</PackageUrl>
+    <Summary>Automatically adds CancellationToken parameters and arguments.</Summary>
+    <Description>This project is illustrative. It should not be used in production, as a real implementation would be much more complex.</Description>
+    <Keywords>
+        <Keyword>cancellation</Keyword>
+        <Keyword>CancellationToken</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>AutoCancellationToken</Name>
+                    <Description>Adds CancellationToken parameters and arguments to the target type.</Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    <!-- Intentionally decrease the rank because we don't want this to appear on top of results. -->
+    <Rank>1</Rank>
+</AspectLibrary>

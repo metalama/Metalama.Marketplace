@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Community.Costura</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>SDK</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Stable</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Community/tree/HEAD/src/Metalama.Community.Costura</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Community.Costura</PackageUrl>
+    <Summary>Embeds dependencies as resources in .NET Framework. A port of Fody Costura.</Summary>
+    <Keywords>
+        <Keyword>fody</Keyword>
+        <Keyword>resources</Keyword>
+        <Keyword>dependencies</Keyword>
+    </Keywords>
+    <!-- Intentionally decrease the rank because we don't want this to appear on top of results. -->
+    <Rank>1</Rank>
+</AspectLibrary>
