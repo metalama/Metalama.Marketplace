@@ -88,15 +88,18 @@ public class AspectLibrary
             this.Popularity = (int) Math.Round( 5 * Math.Log( this.DownloadCounts ) / Math.Log( maxDownloads ) );
         }
 
-        var qualityRank = this.Quality.ToLowerInvariant() switch
+        if ( this.Rank == 0 )
         {
-            "preview" => 1,
-            "rc" => 2,
-            "stable" => 3,
-            "certified" => 4,
-            _ => 0,
-        };
+            var qualityRank = this.Quality.ToLowerInvariant() switch
+            {
+                "preview" => 1,
+                "rc" => 2,
+                "stable" => 3,
+                "certified" => 4,
+                _ => 0,
+            };
 
-        this.Rank = qualityRank + this.Popularity;
+            this.Rank = qualityRank + this.Popularity;
+        }
     }
 }

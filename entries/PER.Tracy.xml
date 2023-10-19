@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>PER.Tracy</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Logging</Category>
+        <Category>SDK</Category>
+    </Categories>
+    <Author>@cgytrus</Author>
+    <Quality>Preview</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/cgytrus/PER.Tracy</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/PER.Tracy</PackageUrl>
+    <Summary>Unofficial C# bindings for Tracy Profiler, a real time, nanosecond resolution, remote telemetry, hybrid frame and sampling profiler for games and other applications.</Summary>
+    <Description>The package contains a transitive fabric that adds profiling to all types in any project referencing the package.</Description>
+    <Keywords>
+        <Keyword>profiling</Keyword>
+        <Keyword>logging</Keyword>
+        <Keyword>trace</Keyword>
+        <Keyword>tracing</Keyword>
+        <Keyword>tracy</Keyword>
+    </Keywords>
+   
+</AspectLibrary>

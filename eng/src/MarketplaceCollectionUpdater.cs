@@ -123,6 +123,7 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         aspectLibrary.Description ??= "";
         aspectLibrary.AspectGroups ??= new[] { new AspectGroup { Aspects = Array.Empty<Aspect>() } };
         aspectLibrary.PackageUrl ??= "";
+        aspectLibrary.DocumentationUrl ??= "";
         
         aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary);
         aspectLibrary.DescriptionText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Description );
