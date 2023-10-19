@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <AspectLibrary>
-    <Name>Metalama.Samples.ChangeTracking (Dirty)</Name>
+    <Name>Metalama.Samples.Clone</Name>
     <Kind>Sample</Kind>
     <Categories>
         <Category>Component Model</Category>
@@ -8,8 +8,8 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/develop/2023.4/examples/exception-handling/retry</SourceUrl>
-    <DocumentationUrl>https://doc.metalama.net/examples/exception-handling/retry</DocumentationUrl>
+    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/clone</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/clone</DocumentationUrl>
     <Summary>A series of step-by-step examples on how implement the deep object cloning.
     </Summary>
     <Keywords>
