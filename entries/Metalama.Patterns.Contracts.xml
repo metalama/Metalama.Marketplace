@@ -24,6 +24,7 @@
         <Keyword>negative</Keyword>
         <Keyword>greater</Keyword>
         <Keyword>smaller</Keyword>
+        <Keyword>less</Keyword>
         <Keyword>equal</Keyword>
         <Keyword>invariant</Keyword>
         <Keyword>phone</Keyword>

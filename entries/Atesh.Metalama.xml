@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AspectLibrary>
+    <Name>Atesh.Metalama</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Contracts</Category>
+    </Categories>
+    <Author>Onur Er</Author>
+    <Quality>Samples</Quality>
+    <License>Public Domain</License>
+    <SourceUrl>https://bitbucket.org/XtroTheArctic/atesh.metalama</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/atesh.metalama</PackageUrl>
+    <Summary>This library contains straightforward implementations of contracts like [GreaterThan], [LessThan], [Range] or [NotNull] or method-based preconditions through [ValidateOperations].</Summary>
+    <Description>This library predates Metalama.Patterns.Contracts which is more complete but also more complex implementation of programming by contracts. We mention Atesh.Metalama
+        as a sample because it shows simple implementations.
+    </Description>
+    <Keywords>
+        <Keyword>greater</Keyword>
+        <Keyword>smaller</Keyword>
+        <Keyword>less</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Preconditions and Postconditions Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>NotNull</Name>
+                    <Description>Verifies that the target field, property or parameter is assigned a non-null value.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>GreaterThan</Name>
+                    <Description>Verifies that the target field, property or parameter is assigned a value greater than a given minimum.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>GreaterThanOrEqual</Name>
+                    <Description>Verifies that the target field, property or parameter is assigned a value greater than or equal to a given minimum.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>LessThan</Name>
+                    <Description>Verifies that the target field, property or parameter is assigned a value smaller than a given minimum.</Description>
+                </Aspect>
+                <Aspect>
+                    <Name>LessThanOrEqual</Name>
+                    <Description>Verifies that the target field, property or parameter is assigned a value smaller than or equal to a given minimum.</Description>
+                </Aspect>            
+                <Aspect>
+                    <Name>ValidateOperation</Name>
+                    <Description>Executes one or more methods before the target method.</Description>
+                </Aspect>   
+            </Aspects>
+
+        </AspectGroup>
+    </AspectGroups>
+</AspectLibrary>
