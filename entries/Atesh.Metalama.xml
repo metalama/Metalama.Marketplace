@@ -6,7 +6,7 @@
         <Category>Contracts</Category>
     </Categories>
     <Author>Onur Er</Author>
-    <Quality>Samples</Quality>
+    <Quality>Sample</Quality>
     <License>Public Domain</License>
     <SourceUrl>https://bitbucket.org/XtroTheArctic/atesh.metalama</SourceUrl>
     <PackageUrl>https://www.nuget.org/packages/atesh.metalama</PackageUrl>
