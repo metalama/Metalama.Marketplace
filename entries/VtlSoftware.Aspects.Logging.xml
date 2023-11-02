@@ -13,6 +13,10 @@
     <DocumentationUrl>https://vtlsoftware.co.uk/aspectdocs/Introduction.html</DocumentationUrl>
     <Summary>This library provides a complete, production-ready logging aspect for Microsoft.Extensions.Logging. It has several additional features such as timing, redacting sensitive data, 
         and a recursion guard.</Summary>
+    <Description><![CDATA[
+        To quickly create a project that uses the library, you can use the <code>dotnet new</code> templates of the <a href="https://www.nuget.org/packages/VtlSoftware.Utility.Templates">https://www.nuget.org/packages/VtlSoftware.Utility.Templates</a> package.
+        ]]>
+    </Description>
     <Keywords>
         <Keyword>log</Keyword>
         <Keyword>logging</Keyword>
