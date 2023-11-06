@@ -26,7 +26,9 @@ public static class NuGetGalleryHelper
         // Fetch the package details
         var requestUri = $"{searchQueryServiceEndpoint}?q={packageName}&prerelease=true&semVerLevel=2.0.0";
         var packages = JObject.Parse(await client.GetStringAsync(requestUri));
-        var package = packages.GetValue("data", StringComparison.Ordinal)?.FirstOrDefault(d => d.Value<string>("id") == packageName);
+        var package = packages
+            .GetValue("data", StringComparison.Ordinal)
+            ?.FirstOrDefault(d => string.Equals( d.Value<string>( "id" ), packageName, StringComparison.OrdinalIgnoreCase ) );
 
         if (package == null)
         {
