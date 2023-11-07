@@ -6,7 +6,7 @@
         <Category>Contracts</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Preview</Quality>
+    <Quality>Certified</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/patterns/contracts</DocumentationUrl>

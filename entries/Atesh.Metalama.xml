@@ -9,7 +9,7 @@
     <Quality>Sample</Quality>
     <License>Public Domain</License>
     <SourceUrl>https://bitbucket.org/XtroTheArctic/atesh.metalama</SourceUrl>
-    <PackageUrl>https://www.nuget.org/packages/atesh.metalama</PackageUrl>
+    <PackageUrl>https://www.nuget.org/packages/Atesh.Metalama</PackageUrl>
     <Summary>This library contains straightforward implementations of contracts like [GreaterThan], [LessThan], [Range] or [NotNull] or method-based preconditions through [ValidateOperations].</Summary>
     <Description>This library predates Metalama.Patterns.Contracts which is more complete but also more complex implementation of programming by contracts. We mention Atesh.Metalama
         as a sample because it shows simple implementations.
