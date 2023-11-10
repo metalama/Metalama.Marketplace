@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Patterns.Xaml</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>XAML</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Dev</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Xaml</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Xaml</PackageUrl>
+    <Summary>
+        Implements dependency properties and commands without boilerplate code.
+    </Summary>
+    <Keywords>
+        <Keyword>dependency</Keyword>
+        <Keyword>property</Keyword>
+        <Keyword>command</Keyword>
+    </Keywords>
+    <AspectGroups>
+        <AspectGroup>
+            <Name>Aspects</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>Command</Name>
+                    <DocumentationUrl>https://github.com/postsharp/Metalama.Patterns/blob/HEAD/src/Metalama.Patterns.Xaml/CommandAttribute.cs</DocumentationUrl>
+                    <Description>Generates a XAML command property from an Execute method and, optionally, a CanExecute property. </Description>
+                </Aspect>
+                <Aspect>
+                    <Name>Command</Name>
+                    <DocumentationUrl>https://github.com/postsharp/Metalama.Patterns/blob/HEAD/src/Metalama.Patterns.Xaml/DependencyPropertyAttribute.cs</DocumentationUrl>
+                    <Description>Turns a plain C# automatic property into a XAML dependency property. </Description>
+                </Aspect>
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    
+</AspectLibrary>
