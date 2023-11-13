@@ -5,7 +5,6 @@
     <Categories>
         <Category>Logging</Category>
         <Category>Cloud</Category>
-        <Category>SDK</Category>
     </Categories>
     <Author>@dtpath</Author>
     <Quality>Stable</Quality>
