@@ -21,6 +21,7 @@
         <Keyword>AWS</Keyword>
         <Keyword>Lambda</Keyword>
         <Keyword>Dynatrace</Keyword>
-        <Keyword>Opentelemetry</Keyword>
+        <Keyword>OpenTelemetry</Keyword>
+        <Keyword>Telemetry</Keyword>
     </Keywords>
 </AspectLibrary>
