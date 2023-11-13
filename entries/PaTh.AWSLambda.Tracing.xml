@@ -3,7 +3,8 @@
     <Name>PaTh.AWSLambda.Tracing (Dynatrace)</Name>
     <Kind>Package</Kind>
     <Categories>
-        <Category>Distributed Tracing</Category>
+        <Category>Logging</Category>
+        <Category>Cloud</Category>
         <Category>SDK</Category>
     </Categories>
     <Author>@dtpath</Author>
