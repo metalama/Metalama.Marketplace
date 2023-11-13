@@ -6,7 +6,7 @@
         <Category>Logging</Category>
         <Category>Cloud</Category>
     </Categories>
-    <Author>@dtpath</Author>
+    <Author>Patrick Thurner</Author>
     <Quality>Stable</Quality>
     <License>Apache</License>
     <SourceUrl>https://github.com/dtPaTh/AWSLambda.Net.Tracing</SourceUrl>
