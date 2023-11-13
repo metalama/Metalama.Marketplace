@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>PaTh.AWSLambda.Tracing (Dynatrace)</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Distributed Tracing</Category>
+        <Category>SDK</Category>
+    </Categories>
+    <Author>@dtpath</Author>
+    <Quality>Stable</Quality>
+    <License>Apache</License>
+    <SourceUrl>https://github.com/dtPaTh/AWSLambda.Net.Tracing</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/Path.AWSLambda.Tracing/</PackageUrl>
+    <DocumentationUrl>https://github.com/dtPaTh/AWSLambda.Net.Tracing</DocumentationUrl>
+    <Summary>Adds distributed tracing to AWS Lambda functions using Dynatrace tracing library.</Summary>
+    <Description>
+        The package contains a transitive fabric that adds distributed tracing to AWS Lambda functions in any project referencing the package.
+    </Description>
+    <Keywords>
+        <Keyword>FaaS</Keyword>
+        <Keyword>AWS</Keyword>
+        <Keyword>Lambda</Keyword>
+        <Keyword>Dynatrace</Keyword>
+        <Keyword>Opentelemetry</Keyword>
+    </Keywords>
+</AspectLibrary>
