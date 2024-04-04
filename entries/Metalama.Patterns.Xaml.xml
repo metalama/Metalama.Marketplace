@@ -28,7 +28,7 @@
                     <Description>Generates a XAML command property from an Execute method and, optionally, a CanExecute property. </Description>
                 </Aspect>
                 <Aspect>
-                    <Name>Command</Name>
+                    <Name>DependencyProperty</Name>
                     <DocumentationUrl>https://github.com/postsharp/Metalama.Patterns/blob/HEAD/src/Metalama.Patterns.Xaml/DependencyPropertyAttribute.cs</DocumentationUrl>
                     <Description>Turns a plain C# automatic property into a XAML dependency property. </Description>
                 </Aspect>
