@@ -57,7 +57,7 @@ object PublicUpdateSearch : BuildType({
     }
 
     requirements {
-        equals("env.BuildAgentType", "caravela04cloud")
+        equals("env.BuildAgentType", "webdeployCloud")
     }
 
     features {
@@ -71,6 +71,7 @@ object PublicUpdateSearch : BuildType({
         schedule {
             schedulingPolicy = daily {
                 hour = 0
+                minute = 0
             }
             branchFilter = "+:<default>"
             triggerBuild = always()

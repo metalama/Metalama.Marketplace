@@ -5,21 +5,9 @@ using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using PostSharp.Engineering.BuildTools.Build.Triggers;
-using PostSharp.Engineering.BuildTools.ContinuousIntegration;
-using PostSharp.Engineering.BuildTools.ContinuousIntegration.Model;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
-using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
 using Spectre.Console.Cli;
-
-const string projectName = "Metalama.Marketplace";
-var productFamily = new ProductFamily( projectName, "2023.0", DevelopmentDependencies.Family );
-var repository = new GitHubRepository( projectName );
-var ciConfiguration = TeamCityHelper.CreateConfiguration(
-    new TeamCityProjectId( "MetalamaMarketplace", "WebsitesAndBusinessSystems" ),
-    "caravela04cloud" );
-var dependencyDefinition =
-    new DependencyDefinition( productFamily, projectName, "master", null, repository, ciConfiguration, false );
 
 static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c ) => c with
 {
@@ -28,7 +16,7 @@ static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c ) => 
     ExportsToTeamCityDeployWithoutDependencies = false
 };
 
-var product = new Product( dependencyDefinition )
+var product = new Product( BusinessSystemsDependencies.MetalamaMarketplace )
 {
     Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering },
     Configurations = Product.DefaultConfigurations
