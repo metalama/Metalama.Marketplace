@@ -36,7 +36,7 @@
                 </Aspect>
                 <Aspect>
                     <Name>CacheKey</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-caching-aspects-cacheattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-caching-aspects-cachekeyattribute</DocumentationUrl>
                     <Description>Causes the target field or property to be a part of the object identity when the object is used as an argument or as a dependency of a
                         cached method. Implements the IFormattable interface.
                     </Description>
