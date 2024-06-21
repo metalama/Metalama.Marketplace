@@ -55,7 +55,7 @@
                     <Description>Reports a warning when any internal member of the type is accessed from the given scope.</Description>
                 </Aspect>   
                 <Aspect>
-                    <Name>InternalOnlyImplementAttribute</Name>
+                    <Name>InternalOnlyImplement</Name>
                     <DocumentationUrl>https://doc.metalama.net/api/metalama_extensions_architecture_aspects_internalonlyimplementattribute</DocumentationUrl>
                     <Description>Reports a warning when the target is implemented by a different project than the current one, except if this project has access to internals.</Description>
                 </Aspect> 

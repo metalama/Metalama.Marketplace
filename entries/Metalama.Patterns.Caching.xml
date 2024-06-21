@@ -30,7 +30,7 @@
                     <Description>Caches the return value of the target method as a function of its arguments.</Description>
                 </Aspect>
                 <Aspect>
-                    <Name>InvalidateCacheAttribute</Name>
+                    <Name>InvalidateCache</Name>
                     <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_caching_aspects_invalidatecacheattribute</DocumentationUrl>
                     <Description>Causes an invocation of the target method to remove from the cache the result of invocations of other given methods with the same arguments.</Description>
                 </Aspect>
