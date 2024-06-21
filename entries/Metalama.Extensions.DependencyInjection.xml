@@ -9,7 +9,7 @@
     <Quality>Certified</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Extensions/tree/HEAD/src/Metalama.Extensions.DependencyInjection</SourceUrl>
-    <DocumentationUrl>https://doc.metalama.net/patterns/dependency-injection</DocumentationUrl>
+    <DocumentationUrl>https://doc.postsharp.net/metalama/patterns/dependency-injection</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Extensions.DependencyInjection</PackageUrl>
     <Summary>
         Defines a [Dependency] aspect that you can apply to any field or property in order to pull it from the dependency injection container.
@@ -27,7 +27,7 @@
             <Aspects>
                 <Aspect>
                     <Name>Dependency</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_extensions_dependencyinjection_dependencyattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-dependencyinjection-dependencyattribute</DocumentationUrl>
                     <Description>Pulls the target field or property from the dependency injection container.</Description>
                 </Aspect>
             </Aspects>

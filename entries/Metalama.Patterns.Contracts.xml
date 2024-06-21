@@ -9,7 +9,7 @@
     <Quality>Certified</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Contracts</SourceUrl>
-    <DocumentationUrl>https://doc.metalama.net/patterns/contracts</DocumentationUrl>
+    <DocumentationUrl>https://doc.postsharp.net/metalama/patterns/contracts</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Contracts</PackageUrl>
     <Summary>
         Metalama Contracts implements three fundamental concepts of contract-based programming: preconditions, postconditions, and type invariants.
@@ -43,72 +43,72 @@
             <Aspects>
                 <Aspect>
                     <Name>NotNull</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_notnullattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-notnullattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a non-null value.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>NotEmpty</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_notemptyattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-notemptyattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a non-empty string or collection.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Required</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_requiredattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-requiredattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned non null value, and if the type is a string, a non empty string.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>CreditCard</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_creditcardattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-creditcardattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a valid credit card number.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Email</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_emailattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-emailattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a valid e-mail address.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Phone</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_phoneattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-phoneattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a valid phone number.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Url</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_urlattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-urlattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a URL.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>EnumDataType</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_enumdatatypeattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-enumdatatypeattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a valid value for a given enum type.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>GreaterThan</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_greaterthanattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-greaterthanattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a value greater than a given minimum.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>LessThan</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_lessthanattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-lessthanattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a value smaller than a given minimum.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Negative</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_negativeattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-negativeattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a negative value.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>Range</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_rangeattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-rangeattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a value within a given range.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>RegularExpression</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_regularexpressionattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-regularexpressionattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a string that matches a given regular expression.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>StringLength</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_stringlengthattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-stringlengthattribute</DocumentationUrl>
                     <Description>Verifies that the target field, property or parameter is assigned a string of expected length.</Description>
                 </Aspect>
             </Aspects>
@@ -119,12 +119,12 @@
             <Aspects>
                 <Aspect>
                     <Name>Invariant</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_invariantattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-invariantattribute</DocumentationUrl>
                     <Description>Executes an invariant-checking method after each public or internal method of a class.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>SuspendInvariants</Name>
-                    <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_suspendinvariantsattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-suspendinvariantsattribute</DocumentationUrl>
                     <Description>Suspends the enforcement of invariants when the target method is executing.</Description>
                 </Aspect>
             </Aspects>
@@ -135,7 +135,7 @@
             <Aspects>
                 <Aspect>
                 <Name>VerifyNotNullableDeclarations</Name>
-                <DocumentationUrl>https://doc.metalama.net/api/metalama_patterns_contracts_contractextensions_verifynotnullabledeclarations#metalama_patterns_contracts_contractextensions_verifynotnullabledeclarations_metalama_framework_aspects_iaspectreceiver_metalama_framework_code_icompilation__system_boolean_</DocumentationUrl>
+                <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-contracts-contractextensions-verifynotnullabledeclarations#metalama-patterns-contracts-contractextensions-verifynotnullabledeclarations-metalama-framework-aspects-iaspectreceiver-metalama-framework-code-icompilation--system-boolean-</DocumentationUrl>
                 <Description>Automatically adds the [NotNull] contract to all non-nullable fields, properties and parameters of the public API, and reports a warning when
                     the [NotNull] contract has been added manually because this is redundant.</Description>
                 </Aspect>

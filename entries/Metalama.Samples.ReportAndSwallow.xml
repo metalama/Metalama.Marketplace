@@ -9,7 +9,7 @@
     <Quality>Sample</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/exception-handling/report-and-swallow</SourceUrl>
-    <DocumentationUrl>https://doc.metalama.net/examples/exception-handling/report-and-swallow</DocumentationUrl>
+    <DocumentationUrl>https://doc.postsharp.net/metalama/examples/exception-handling/report-and-swallow</DocumentationUrl>
     <Summary>Shows how report and swallow any exception flowing outside of the target method.</Summary>
     <Keywords>
         <Keyword>exception</Keyword>
