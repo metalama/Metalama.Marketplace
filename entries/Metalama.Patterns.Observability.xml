@@ -7,10 +7,10 @@
         <Category>Component Model</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Dev</Quality>
+    <Quality>Certified</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Observability</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-observability</DocumentationUrl>
+    <DocumentationUrl>https://doc.postsharp.net/metalama/patterns/observability</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Observability</PackageUrl>
     <Summary>
         An implementation of INotifyPropertyChanged supporting composite properties and child objects.
