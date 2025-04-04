@@ -73,6 +73,10 @@ public class AspectLibrary
     [JsonPropertyName( "downloadsCount" )]
     public int DownloadCounts { get; set; }
     
+    [JsonPropertyName( "source" )]
+    [Facet]
+    public string Source { get; set; } = "metalama-marketplace";
+    
     [JsonPropertyName( "popularity" )]
     [Facet]
     public int Popularity { get; set; }
