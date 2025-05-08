@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.ToString</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Exception Handling</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/tostring</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/tostring</DocumentationUrl>
+    <Summary>A series of step-by-step examples on how to automatically implement the ToString method. An advanced step shows how to add a code fix.</Summary>
+    <Keywords>
+        <Keyword>tostring</Keyword>
+        <Keyword>code fix</Keyword>
+        <Keyword>refactoring</Keyword>
+    </Keywords>
+</AspectLibrary>

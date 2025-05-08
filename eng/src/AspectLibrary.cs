@@ -40,9 +40,9 @@ public class AspectLibrary
     
     [JsonPropertyName( "packageUrl" )]
     public string PackageUrl { get; set; }
-    
-    [JsonPropertyName( "sourceUrl" )]
-    public string SourceUrl { get; set; }
+
+    [JsonPropertyName( "sourceUrl" )] 
+    public string SourceUrl { get; set; } = "";
     
     [JsonPropertyName( "documentationUrl" )]
     public string DocumentationUrl { get; set; }
@@ -99,7 +99,7 @@ public class AspectLibrary
                 "preview" => 1,
                 "rc" => 2,
                 "stable" => 3,
-                "certified" => 4,
+                "supported" => 4,
                 _ => 0,
             };
 

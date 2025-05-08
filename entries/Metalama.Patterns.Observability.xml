@@ -7,7 +7,7 @@
         <Category>Component Model</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Certified</Quality>
+    <Quality>Supported</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns/src/Metalama.Patterns.Observability</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/patterns/observability</DocumentationUrl>

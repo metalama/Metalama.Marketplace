@@ -6,7 +6,7 @@
         <Category>Caching</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Certified</Quality>
+    <Quality>Supported</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns/src/Metalama.Patterns.Memoization</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/patterns/memoization</DocumentationUrl>

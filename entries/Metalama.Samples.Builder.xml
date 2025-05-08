@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Builder</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Design Patterns</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/builder</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/builder</DocumentationUrl>
+    <Summary>A step-by-step guide to implenting the Builder pattern. Shows how to generate the Builder type and all required methods, then
+        how to support inheritance, Finally, adds support for immutable collections.
+    </Summary>
+    <Keywords>
+        <Keyword>builder</Keyword>
+        <Keyword>creational pattern</Keyword>
+        <Keyword>immutable</Keyword>
+    </Keywords>
+</AspectLibrary>

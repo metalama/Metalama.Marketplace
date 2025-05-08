@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.NormalizeStrings</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Contracts</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/validation/string-normalization</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/validation/string-normalization</DocumentationUrl>
+    <Summary>Simple aspects that trim, uppercase or normalize strings before assigning them to the property or at the beginning of a method.</Summary>
+    <Keywords>
+        <Keyword>trim</Keyword>
+        <Keyword>normalize</Keyword>
+    </Keywords>
+</AspectLibrary>

@@ -21,7 +21,7 @@ namespace BuildMetalamaMarketplace;
 
 public class MarketplaceCollectionUpdater : CollectionUpdater
 {
-    private static readonly XmlSerializer _xmlSerializer = new XmlSerializer( typeof(AspectLibrary) );
+    private static readonly XmlSerializer _xmlSerializer = new(typeof(AspectLibrary));
 
     public MarketplaceCollectionUpdater( SearchBackendBase searchBackend )
         : base( searchBackend )
@@ -33,7 +33,8 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         UpdateSearchCommandSettings settings,
         string targetCollection )
     {
-        var sourcePath = settings.SourceUrl;
+        var productExtension = context.Product.Extensions.OfType<UpdateSearchProductExtension>().Single();
+        var sourcePath = productExtension.SourceUrl;
 
         if ( !Path.IsPathRooted( sourcePath ) )
         {
@@ -41,11 +42,6 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         }
 
         var aspectLibraries = new List<AspectLibrary>();
-
-        if ( settings.Single )
-        {
-            throw new NotSupportedException();
-        }
 
         // Parse all libraries.
         foreach ( var aspectLibraryXmlPath in Directory.EnumerateFiles(
@@ -55,52 +51,52 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
         {
             aspectLibraries.Add( ParseAspectLibrary( aspectLibraryXmlPath ) );
         }
-        
-        // Download statistics.
-        async Task GetDownloadStatistics(AspectLibrary aspectLibrary)
-        {
-            var packageRegex = new Regex(@"https://www\.nuget\.org/packages/(?<package>[^/]+)/?");
-            var packageMatch = packageRegex.Match(aspectLibrary.PackageUrl);
 
-            if (packageMatch.Success)
+        // Download statistics.
+        async Task GetDownloadStatistics( AspectLibrary aspectLibrary )
+        {
+            var packageRegex = new Regex( @"https://www\.nuget\.org/packages/(?<package>[^/]+)/?" );
+            var packageMatch = packageRegex.Match( aspectLibrary.PackageUrl );
+
+            if ( packageMatch.Success )
             {
                 var packageName = packageMatch.Groups["package"].Value;
 
-                context.Console.WriteMessage($"Getting download statistics for {packageName}.");
+                context.Console.WriteMessage( $"Getting download statistics for {packageName}." );
 
                 int? downloadCounts;
 
                 try
                 {
-                    downloadCounts = await NuGetGalleryHelper.GetDownloadCountsAsync(packageName, context);
+                    downloadCounts = await NuGetGalleryHelper.GetDownloadCountsAsync( packageName, context );
                 }
-                catch (Exception e)
+                catch ( Exception e )
                 {
-                    context.Console.WriteError(e.ToString());
+                    context.Console.WriteError( e.ToString() );
                     downloadCounts = null;
                 }
 
-                if (downloadCounts == null)
+                if ( downloadCounts == null )
                 {
-                    context.Console.WriteWarning($"Cannot get the download count of '{packageName}'.");
+                    context.Console.WriteWarning( $"Cannot get the download count of '{packageName}'." );
                 }
 
                 aspectLibrary.DownloadCounts = downloadCounts ?? 0;
             }
             else
             {
-                context.Console.WriteWarning($"{aspectLibrary.PackageUrl} is not a correct NuGet URL.");
+                context.Console.WriteWarning( $"{aspectLibrary.PackageUrl} is not a correct NuGet URL." );
             }
         }
-        
+
         var tasks = aspectLibraries.Where( l => !string.IsNullOrEmpty( l.PackageUrl ) ).Select( GetDownloadStatistics );
         await Task.WhenAll( tasks );
-        
+
         // Compute relative popularity and rank.
         var maxDownloads = aspectLibraries.Max( l => l.DownloadCounts );
         foreach ( var aspectLibrary in aspectLibraries )
         {
-            aspectLibrary.Complete(maxDownloads);
+            aspectLibrary.Complete( maxDownloads );
         }
 
         await this.Backend.UpsertDocumentsAsync( targetCollection, aspectLibraries );
@@ -117,22 +113,23 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
             using var aspectLibraryXmlReader = new XmlTextReader( aspectLibraryXmlStream );
             aspectLibrary = (AspectLibrary) _xmlSerializer.Deserialize( aspectLibraryXmlReader )!;
         }
-        
+
         TrimStrings( aspectLibrary );
 
         aspectLibrary.Description ??= "";
         aspectLibrary.AspectGroups ??= new[] { new AspectGroup { Aspects = Array.Empty<Aspect>() } };
         aspectLibrary.PackageUrl ??= "";
         aspectLibrary.DocumentationUrl ??= "";
-        
-        aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary);
+
+        aspectLibrary.SummaryText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Summary );
         aspectLibrary.DescriptionText = HtmlUtilities.ConvertToPlainText( aspectLibrary.Description );
 
-        foreach ( var aspect in aspectLibrary.AspectGroups.Where( g => g.Aspects != null ).SelectMany( x => x.Aspects ) )
+        foreach ( var aspect in aspectLibrary.AspectGroups.Where( g => g.Aspects != null )
+                     .SelectMany( x => x.Aspects ) )
         {
             aspect.DescriptionText = HtmlUtilities.ConvertToPlainText( aspect.Description ?? "" );
         }
-        
+
         return aspectLibrary;
 
         static void TrimStrings( object o )
@@ -143,11 +140,11 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
                 {
                     continue;
                 }
-                
+
                 if ( property.PropertyType.IsArray )
                 {
                     var elementType = property.PropertyType.GetElementType()!;
-                    
+
                     if ( elementType.IsPrimitive )
                     {
                         continue;
@@ -178,7 +175,7 @@ public class MarketplaceCollectionUpdater : CollectionUpdater
                         }
                     }
                 }
-                else if (property.PropertyType == typeof(string))
+                else if ( property.PropertyType == typeof(string) )
                 {
                     var value = (string?) property.GetValue( o );
 

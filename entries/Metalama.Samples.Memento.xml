@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Memento</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Design Patterns</Category>
+        <Category>Component Model</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/memento</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/memento</DocumentationUrl>
+    <Summary>Implements the Memento design pattern by generating a nested type and all required methods and constructors.</Summary>
+    <Keywords>
+        <Keyword>memento</Keyword>
+        <Keyword>undo/redo</Keyword>
+    </Keywords>
+</AspectLibrary>

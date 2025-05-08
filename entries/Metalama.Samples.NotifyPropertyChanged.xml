@@ -9,7 +9,7 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/notifypropertychanged</SourceUrl>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/notifypropertychanged</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/examples/notifypropertychanged</DocumentationUrl>
     <Summary>A trivial aspect that automatically implements the INotifyPropertyChanged interface.
     </Summary>

@@ -6,7 +6,7 @@
         <Category>Dependency Injection</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Certified</Quality>
+    <Quality>Supported</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Extensions/tree/HEAD/src/Metalama.Extensions.DependencyInjection</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/patterns/dependency-injection</DocumentationUrl>

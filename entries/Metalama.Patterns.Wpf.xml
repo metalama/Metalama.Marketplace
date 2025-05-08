@@ -6,7 +6,7 @@
         <Category>XAML</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
-    <Quality>Certified</Quality>
+    <Quality>Supported</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns/src/Metalama.Patterns.Wpf</SourceUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Wpf</PackageUrl>

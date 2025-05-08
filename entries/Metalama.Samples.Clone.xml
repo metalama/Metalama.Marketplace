@@ -8,7 +8,7 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/clone</SourceUrl>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/clone</SourceUrl>
     <DocumentationUrl>https://doc.metalama.net/examples/clone</DocumentationUrl>
     <Summary>A series of step-by-step examples on how implement the deep object cloning.
     </Summary>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.IgnoreValues</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Contracts</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/validation/ignore-values</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/validation/ignore-values</DocumentationUrl>
+    <Summary>A simple aspect that silently skips attempts to set a property to an invalid value, for instance an empty string.</Summary>
+    <Keywords>
+        <Keyword>ignore</Keyword>
+        <Keyword>filter</Keyword>
+    </Keywords>
+</AspectLibrary>

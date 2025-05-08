@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Singleton</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Design Patterns</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/singleton</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/singleton</DocumentationUrl>
+    <Summary>Two approaches to the Singleton creational pattern.</Summary>
+    <Keywords>
+        <Keyword>singleton</Keyword>
+        <Keyword>AddSingleton</Keyword>
+    </Keywords>
+</AspectLibrary>

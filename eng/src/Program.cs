@@ -6,39 +6,41 @@ using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
 using PostSharp.Engineering.BuildTools.Build.Triggers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
+using PostSharp.Engineering.BuildTools.Dependencies.Model;
 using PostSharp.Engineering.BuildTools.Search;
 using Spectre.Console.Cli;
 
-static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c ) => c with
+static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c )
 {
-    ExportsToTeamCityBuild = false,
-    ExportsToTeamCityDeploy = false,
-    ExportsToTeamCityDeployWithoutDependencies = false
-};
+    return c with
+    {
+        ExportsToTeamCityBuild = false,
+        ExportsToTeamCityDeploy = false,
+        ExportsToTeamCityDeployWithoutDependencies = false
+    };
+}
 
 var product = new Product( BusinessSystemsDependencies.MetalamaMarketplace )
 {
-    Dependencies = new[] { DevelopmentDependencies.PostSharpEngineering },
+    Dependencies = [DevelopmentDependencies.PostSharpEngineering],
     Configurations = Product.DefaultConfigurations
         .WithValue( BuildConfiguration.Debug, RemoveFromTeamCity )
         .WithValue( BuildConfiguration.Release, RemoveFromTeamCity )
         .WithValue( BuildConfiguration.Public, RemoveFromTeamCity ),
-    Extensions = new ProductExtension[]
-    {
-        /*
-        new UpdateSearchProductExtension<UpdateMarketplaceCommand>(
+    Extensions =
+    [
+        new UpdateSearchProductExtension(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "metalama-marketplace",
             "entries",
+            backend => new MarketplaceCollectionUpdater( backend ),
             customBuildConfigurationName: "Deploy [Public]",
-            buildTriggers: new(null, null, new IBuildTrigger[] { new NightlyBuildTrigger( 0, false ) }) )
-            */
-    }
+            buildTriggers: new ConfigurationSpecific<IBuildTrigger[]?>( null, null,
+                [new NightlyBuildTrigger( 0, false )] ) )
+    ]
 };
 
-var commandApp = new CommandApp();
-
-commandApp.AddProductCommands( product );
+var commandApp = new EngineeringApp(product);
 commandApp.Configure( config => config.Settings.PropagateExceptions = true );
 
 return commandApp.Run( args );

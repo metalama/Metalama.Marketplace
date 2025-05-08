@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Extensions.Validation</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Architecture</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Supported</Quality>
+    <License>Commercial</License>
+    <DocumentationUrl>https://doc.metalama.net/conceptual/architecture</DocumentationUrl>
+    <PackageUrl>https://www.nuget.org/packages/Metalama.Extensions.Validation</PackageUrl>
+    <Summary>
+        Metalama Validation adds the ability to validate inbound code references or to run validators after all aspects have been applied.
+    </Summary>
+    <Description>
+
+    </Description>
+    <Keywords>
+        <Keyword>architecture</Keyword>
+        <Keyword>dependency</Keyword>
+        <Keyword>ruler</Keyword>
+        <Keyword>usage</Keyword>
+        <Keyword>validate</Keyword>
+        <Keyword>verify</Keyword>
+    </Keywords>
+    <AspectGroups>
+    
+        <AspectGroup>
+            <Name>Fabric Extensions</Name>
+            <Aspects>
+                <Aspect>
+                    <Name>ValidateInboundReferences</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-validation-referencevalidationqueryextensions-validateinboundreferences</DocumentationUrl>
+                    <Description>Runs a validator for each inbound reference (i.e. usage) of the selected declaration.</Description>
+                </Aspect> 
+                <Aspect>
+                    <Name>Validate</Name>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-validation-validationqueryextensions-validate</DocumentationUrl>
+                    <Description>Runs a validator for the selected declaration, possibly before any or after all aspects have been applied.</Description>
+                </Aspect> 
+            </Aspects>
+        </AspectGroup>
+    </AspectGroups>
+    
+</AspectLibrary>
