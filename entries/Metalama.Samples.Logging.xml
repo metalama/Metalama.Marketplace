@@ -9,7 +9,7 @@
     <Quality>Sample</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/log</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/examples/log</DocumentationUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/log</DocumentationUrl>
     <Summary>A series of step-by-step examples on how to logging.</Summary>
     <Keywords>
         <Keyword>log</Keyword>

@@ -7,9 +7,8 @@
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Certified</Quality>
-    <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Extensions/tree/HEAD/src/Metalama.Extensions.Architecture</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/conceptual/architecture</DocumentationUrl>
+    <License>Commercial</License>
+    <DocumentationUrl>https://doc.metalama.net/conceptual/architecture</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Extensions.Architecture</PackageUrl>
     <Summary>
         Metalama Architecture implements architecture-as-code: the ability to validate the codebase against architecture rules in real time, in the IDE.
@@ -22,7 +21,7 @@
         <Keyword>dependency</Keyword>
         <Keyword>naming</Keyword>
         <Keyword>convention</Keyword>
-        <Keyword>ruler</Keyword>
+        <Keyword>rule</Keyword>
         <Keyword>usage</Keyword>
         <Keyword>validate</Keyword>
         <Keyword>verify</Keyword>
@@ -36,32 +35,32 @@
             <Aspects>
                 <Aspect>
                     <Name>CanOnlyBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-canonlybeusedfromattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-canonlybeusedfromattribute</DocumentationUrl>
                     <Description>Reports a warning when the target declaration is accessed from outside of the given scope.</Description>
                 </Aspect>               
                 <Aspect>
                     <Name>InternalsCanOnlyBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-internalscanonlybeusedfromattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-internalscanonlybeusedfromattribute</DocumentationUrl>
                     <Description>Reports a warning when any internal member of the type is accessed from outside the given scope.</Description>
                 </Aspect>               
                 <Aspect>
                     <Name>CannotBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-cannotbeusedfromattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-cannotbeusedfromattribute</DocumentationUrl>
                     <Description>Reports a warning when the target declaration is accessed from the given scope.</Description>
                 </Aspect>               
                 <Aspect>
                     <Name>InternalsCannotBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-internalscannotbeusedfromattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-internalscannotbeusedfromattribute</DocumentationUrl>
                     <Description>Reports a warning when any internal member of the type is accessed from the given scope.</Description>
                 </Aspect>   
                 <Aspect>
                     <Name>InternalOnlyImplement</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-internalonlyimplementattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-internalonlyimplementattribute</DocumentationUrl>
                     <Description>Reports a warning when the target is implemented by a different project than the current one, except if this project has access to internals.</Description>
                 </Aspect> 
                 <Aspect>
                     <Name>Experimental</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/conceptual/architecture/experimental</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/conceptual/architecture/experimental</DocumentationUrl>
                     <Description>Report a warning when a declaration is being used except if this declaration is itself experimental.</Description>
                 </Aspect> 
                 <Aspect>
@@ -71,7 +70,7 @@
                 </Aspect>             
                 <Aspect>
                     <Name>DerivedTypesMustRespectNamingConvention</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-aspects-derivedtypesmustrespectnamingconventionattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-aspects-derivedtypesmustrespectnamingconventionattribute</DocumentationUrl>
                     <Description>Verifies that the derived types respect a given naming convention.</Description>
                 </Aspect>               
             </Aspects>
@@ -82,32 +81,32 @@
             <Aspects>
                 <Aspect>
                     <Name>CanOnlyBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-canonlybeusedfrom</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-canonlybeusedfrom</DocumentationUrl>
                     <Description>Reports a warning when any type in the current scope is used from a different context than the ones matching the specified predicate.</Description>
                 </Aspect> 
                 <Aspect>
                     <Name>InternalsCanOnlyBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-internalscanonlybeusedfrom</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-internalscanonlybeusedfrom</DocumentationUrl>
                     <Description>Reports a warning when any of the internal APIs of the current scope in used from a different context than the one allowed, except if this concept has access to the type using inheritance rules.</Description>
                 </Aspect> 
                 <Aspect>
                     <Name>CannotBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-cannotbeusedfrom</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-cannotbeusedfrom</DocumentationUrl>
                     <Description>Reports a warning when any type in the current scope is used from the context matching the specified predicate.</Description>
                 </Aspect>          
                 <Aspect>
                     <Name>InternalsCannotBeUsedFrom</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-internalscannotbeusedfrom</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-internalscannotbeusedfrom</DocumentationUrl>
                     <Description>Reports a warning when any of the internal APIs of the current scope in used from a different context different than the one allowed, except if this concept has access to the type using inheritance rules.</Description>
                 </Aspect> 
                 <Aspect>
                     <Name>Experimental</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-experimental</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-experimental</DocumentationUrl>
                     <Description>Report a warning when a declaration is being used except if this declaration is itself experimental.</Description>
                 </Aspect> 
                 <Aspect>
                 <Name>MustRespectNamingConvention</Name>
-                <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-extensions-architecture-architectureextensions-mustrespectnamingconvention</DocumentationUrl>
+                <DocumentationUrl>https://doc.metalama.net/api/metalama-extensions-architecture-architectureextensions-mustrespectnamingconvention</DocumentationUrl>
                 <Description>Verifies that the selected declarations respect a given naming convention.</Description>
                 </Aspect>
             </Aspects>

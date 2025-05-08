@@ -25,12 +25,14 @@ var product = new Product( BusinessSystemsDependencies.MetalamaMarketplace )
         .WithValue( BuildConfiguration.Public, RemoveFromTeamCity ),
     Extensions = new ProductExtension[]
     {
+        /*
         new UpdateSearchProductExtension<UpdateMarketplaceCommand>(
             "https://0fpg9nu41dat6boep.a1.typesense.net",
             "metalama-marketplace",
             "entries",
             customBuildConfigurationName: "Deploy [Public]",
             buildTriggers: new(null, null, new IBuildTrigger[] { new NightlyBuildTrigger( 0, false ) }) )
+            */
     }
 };
 

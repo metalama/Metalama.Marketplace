@@ -8,8 +8,8 @@
     <Author>PostSharp Technologies</Author>
     <Quality>Certified</Quality>
     <License>MIT</License>
-    <SourceUrl>https://github.com/postsharp/Metalama.Patterns/tree/HEAD/src/Metalama.Patterns.Caching.Aspects</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/patterns/caching</DocumentationUrl>
+    <SourceUrl>https://github.com/metalama/Metalama/tree/HEAD/Metalama.Patterns/src/Metalama.Patterns.Caching.Aspects</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/patterns/caching</DocumentationUrl>
     <PackageUrl>https://www.nuget.org/packages/Metalama.Patterns.Caching.Aspects</PackageUrl>
     <Summary>
         A robust caching framework for C# supporting both in-memory caching, Redis distributed caching, and multi-node cache synchronization over
@@ -26,17 +26,17 @@
             <Aspects>
                 <Aspect>
                     <Name>Cache</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-caching-aspects-cacheattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-patterns-caching-aspects-cacheattribute</DocumentationUrl>
                     <Description>Caches the return value of the target method as a function of its arguments.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>InvalidateCache</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-caching-aspects-invalidatecacheattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-patterns-caching-aspects-invalidatecacheattribute</DocumentationUrl>
                     <Description>Causes an invocation of the target method to remove from the cache the result of invocations of other given methods with the same arguments.</Description>
                 </Aspect>
                 <Aspect>
                     <Name>CacheKey</Name>
-                    <DocumentationUrl>https://doc.postsharp.net/metalama/api/metalama-patterns-caching-aspects-cachekeyattribute</DocumentationUrl>
+                    <DocumentationUrl>https://doc.metalama.net/api/metalama-patterns-caching-aspects-cachekeyattribute</DocumentationUrl>
                     <Description>Causes the target field or property to be a part of the object identity when the object is used as an argument or as a dependency of a
                         cached method. Implements the IFormattable interface.
                     </Description>

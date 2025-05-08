@@ -9,7 +9,7 @@
     <Quality>Sample</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/exception-handling/retry</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/examples/exception-handling/retry</DocumentationUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/exception-handling/retry</DocumentationUrl>
     <Summary>A series of step-by-step examples on how to automatically retry a method upon failure. Includes an example using Polly.</Summary>
     <Keywords>
         <Keyword>retry</Keyword>

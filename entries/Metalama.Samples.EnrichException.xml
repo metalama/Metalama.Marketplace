@@ -9,7 +9,7 @@
     <Quality>Sample</Quality>
     <License>MIT</License>
     <SourceUrl>https://github.com/postsharp/Metalama.Samples/tree/HEAD/examples/exception-handling/enrich-exception</SourceUrl>
-    <DocumentationUrl>https://doc.postsharp.net/metalama/examples/exception-handling/enrich-exception</DocumentationUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/exception-handling/enrich-exception</DocumentationUrl>
     <Summary>Shows how to enrich exceptions with the value of method arguments so crash report can contain more complete and relevant information.</Summary>
     <Keywords>
         <Keyword>exception</Keyword>
