@@ -3,8 +3,7 @@
     <Name>Metalama.Samples.NotifyPropertyChanged</Name>
     <Kind>Sample</Kind>
     <Categories>
-        <Category>Component Model</Category>
-        <Category>Observability</Category>
+        <Category>UI</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>

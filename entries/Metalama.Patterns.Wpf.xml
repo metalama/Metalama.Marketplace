@@ -3,7 +3,7 @@
     <Name>Metalama.Patterns.Wpf</Name>
     <Kind>Package</Kind>
     <Categories>
-        <Category>XAML</Category>
+        <Category>UI</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Supported</Quality>

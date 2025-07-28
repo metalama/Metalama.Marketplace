@@ -3,6 +3,7 @@
     <Name>Metalama.Samples.ReportAndSwallow</Name>
     <Kind>Sample</Kind>
     <Categories>
+        <Category>Diagnostics</Category>
         <Category>Exception Handling</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Proxy</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Design Patterns</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/Metalama.Samples.Proxy</SourceUrl>
+    <DocumentationUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/Metalama.Samples.Proxy</DocumentationUrl>
+    <Summary>An aspect that generates static abstract proxies.</Summary>
+    <Keywords>
+        <Keyword>proxy</Keyword>
+        <Keyword>dynamic proxy</Keyword>
+        <Keyword>decorator</Keyword>
+        <Keyword>interceptor</Keyword>
+    </Keywords>
+</AspectLibrary>

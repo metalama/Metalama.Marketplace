@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>Metalama.Samples.Comparison</Name>
+    <Kind>Sample</Kind>
+    <Categories>
+        <Category>Object Services</Category>
+    </Categories>
+    <Author>PostSharp Technologies</Author>
+    <Quality>Sample</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/metalama/Metalama.Samples/tree/HEAD/examples/comparison</SourceUrl>
+    <DocumentationUrl>https://doc.metalama.net/examples/comparison</DocumentationUrl>
+    <Summary>Exploring the IEquatable&gt;T&gt; rabbit hole, step by step.</Summary>
+    <Keywords>
+        <Keyword>tostring</Keyword>
+        <Keyword>code fix</Keyword>
+        <Keyword>refactoring</Keyword>
+    </Keywords>
+</AspectLibrary>

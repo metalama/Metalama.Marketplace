@@ -3,7 +3,7 @@
     <Name>VtlSoftware.Aspects.Logging</Name>
     <Kind>Package</Kind>
     <Categories>
-        <Category>Logging</Category>
+        <Category>Diagnostics</Category>
     </Categories>
     <Author>Vtl Software</Author>
     <Quality>Stable</Quality>

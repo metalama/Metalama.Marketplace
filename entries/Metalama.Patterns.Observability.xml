@@ -3,8 +3,7 @@
     <Name>Metalama.Patterns.Observability</Name>
     <Kind>Package</Kind>
     <Categories>
-        <Category>Observability</Category>
-        <Category>Component Model</Category>
+        <Category>UI</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Supported</Quality>

@@ -3,7 +3,7 @@
     <Name>PER.Tracy</Name>
     <Kind>Sample</Kind>
     <Categories>
-        <Category>Logging</Category>
+        <Category>Diagnostics</Category>
         <Category>SDK</Category>
     </Categories>
     <Author>ConfigG</Author>

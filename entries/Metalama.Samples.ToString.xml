@@ -3,7 +3,7 @@
     <Name>Metalama.Samples.ToString</Name>
     <Kind>Sample</Kind>
     <Categories>
-        <Category>Exception Handling</Category>
+        <Category>Diagnostics</Category>
     </Categories>
     <Author>PostSharp Technologies</Author>
     <Quality>Sample</Quality>

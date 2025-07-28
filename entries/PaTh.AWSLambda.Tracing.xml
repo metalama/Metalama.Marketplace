@@ -3,8 +3,7 @@
     <Name>PaTh.AWSLambda.Tracing</Name>
     <Kind>Package</Kind>
     <Categories>
-        <Category>Logging</Category>
-        <Category>Cloud</Category>
+        <Category>Diagnostics</Category>
     </Categories>
     <Author>Patrick Thurner</Author>
     <Quality>Stable</Quality>
