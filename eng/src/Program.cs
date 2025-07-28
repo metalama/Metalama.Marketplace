@@ -30,7 +30,7 @@ var product = new Product( BusinessSystemsDependencies.MetalamaMarketplace )
     Extensions =
     [
         new UpdateSearchProductExtension(
-            "https://0fpg9nu41dat6boep.a1.typesense.net",
+            "https://typesense.postsharp.net",
             "metalama-marketplace",
             "entries",
             backend => new MarketplaceCollectionUpdater( backend ),
