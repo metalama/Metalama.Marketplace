@@ -4,11 +4,11 @@ using BuildMetalamaMarketplace;
 using PostSharp.Engineering.BuildTools;
 using PostSharp.Engineering.BuildTools.Build;
 using PostSharp.Engineering.BuildTools.Build.Model;
-using PostSharp.Engineering.BuildTools.Build.Triggers;
+using PostSharp.Engineering.BuildTools.ContinuousIntegration.Triggers;
 using PostSharp.Engineering.BuildTools.Dependencies.Definitions;
 using PostSharp.Engineering.BuildTools.Dependencies.Model;
+using PostSharp.Engineering.BuildTools.Docker;
 using PostSharp.Engineering.BuildTools.Search;
-using Spectre.Console.Cli;
 
 static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c )
 {
@@ -22,7 +22,14 @@ static BuildConfigurationInfo RemoveFromTeamCity( BuildConfigurationInfo c )
 
 var product = new Product( BusinessSystemsDependencies.MetalamaMarketplace )
 {
-    Dependencies = [DevelopmentDependencies.PostSharpEngineering],
+    OverriddenBuildAgentRequirements = new ContainerRequirements( ContainerHostKind.Windows )
+    {
+        Components =
+        [
+            new DotNetComponent( PreferredVersions.DotNetSdk.V_8_0, DotNetComponentKind.Sdk ),
+        ]
+    },
+    DotNetSdkVersion = new DotNetSdkVersion( PreferredVersions.DotNetSdk.V_8_0 ) { AllowPrerelease = true },
     Configurations = Product.DefaultConfigurations
         .WithValue( BuildConfiguration.Debug, RemoveFromTeamCity )
         .WithValue( BuildConfiguration.Release, RemoveFromTeamCity )
