@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<AspectLibrary>
+    <Name>CodoMetis.TypeKit</Name>
+    <Kind>Package</Kind>
+    <Categories>
+        <Category>Object Services</Category>
+        <Category>Contracts</Category>
+    </Categories>
+    <Author>CaffeinatedCoder</Author>
+    <Quality>Stable</Quality>
+    <License>MIT</License>
+    <SourceUrl>https://github.com/CaffeinatedCoder/CodoMetis.TypeKit</SourceUrl>
+    <PackageUrl>https://www.nuget.org/packages/CodoMetis.TypeKit.Generators</PackageUrl>
+    <DocumentationUrl>https://github.com/CaffeinatedCoder/CodoMetis.TypeKit/tree/HEAD/docs</DocumentationUrl>
+    <Summary>Strong types for .NET 10: value objects and smart enums generated from one line, and an Option and Result that cannot be misused, with one validation rule carried through JSON, route binding, EF Core, OpenAPI and HTTP problem details.</Summary>
+    <Description><![CDATA[
+        A transitive fabric finds every type that implements a TypeKit contract such as <code>IValue&lt;T&gt;</code>, <code>IValidatedValue&lt;TSelf, T, TFault&gt;</code> or <code>IClosedSet&lt;T&gt;</code>, and templates generate its constructor, factories, equality, comparison, parsing, formatting, JSON converter and type converter. No attribute is needed.
+        Companion packages map value objects to EF Core columns and to the ASP.NET Core OpenAPI document, and analyzers catch misuse at build time. Only <code>CodoMetis.TypeKit.Generators</code> references Metalama.
+        ]]>
+    </Description>
+    <Keywords>
+        <Keyword>value object</Keyword>
+        <Keyword>strongly-typed id</Keyword>
+        <Keyword>primitive obsession</Keyword>
+        <Keyword>smart enum</Keyword>
+        <Keyword>option</Keyword>
+        <Keyword>result</Keyword>
+        <Keyword>DDD</Keyword>
+        <Keyword>EF Core</Keyword>
+        <Keyword>OpenAPI</Keyword>
+        <Keyword>Native AOT</Keyword>
+    </Keywords>
+</AspectLibrary>
