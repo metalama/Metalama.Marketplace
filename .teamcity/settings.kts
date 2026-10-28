@@ -95,8 +95,8 @@ object PublicUpdateSearch : BuildType({
         }
         gitHubAppBuildScopedToken {
             parameterName = "env.GITHUB_TOKEN"
-            connectionId = "%GITHUB_CONNECTION_POSTSHARP%"
-            targetRepositories = "MetalamaMarketplace"
+            connectionId = "%GITHUB_CONNECTION_METALAMA%"
+            targetRepositories = "Metalama.Marketplace"
         }
     }
 
